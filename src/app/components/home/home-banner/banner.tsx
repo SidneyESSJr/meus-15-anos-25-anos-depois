@@ -7,35 +7,13 @@ import { theme } from "@/theme/theme";
 
 export default function Banner() {
   return (
-    <Container sx={{ padding: "2rem" }}>
+    <Container sx={{ padding: "2rem",   [theme.breakpoints.down("xs")]: {
+      padding: '.75rem'
+    }}}>
       <BannerFrame>
-        <Typography
-          variant="h1"
-          sx={{
-            [theme.breakpoints.down("md")]: {
-              fontSize: "7rem",
-            },
-            [theme.breakpoints.down("sm")]: {
-              fontSize: "5rem",
-            },
-          }}
-        >
-          Meus 15 anos
-        </Typography>
+        <Typography variant="h1">Meus 15 anos</Typography>
 
-        <Typography
-          variant="h1"
-          sx={{
-            [theme.breakpoints.down("md")]: {
-              fontSize: "7rem",
-            },
-            [theme.breakpoints.down("sm")]: {
-              fontSize: "5rem",
-            },
-          }}
-        >
-          25 anos depois
-        </Typography>
+        <Typography variant="h1">25 anos depois</Typography>
       </BannerFrame>
     </Container>
   );

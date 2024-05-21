@@ -11,8 +11,7 @@ const HeaderFrameComponent = styled(
   gridTemplateColumns: "1fr 1fr",
   [theme.breakpoints.down("sm")]: {
     gridTemplateColumns: "1fr",
-    rowGap: Root.gapM,
-    padding: Root.gapL
+    padding: 0,
   },
 }));
 

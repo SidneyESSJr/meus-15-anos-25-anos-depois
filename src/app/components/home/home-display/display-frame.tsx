@@ -18,13 +18,11 @@ const DisplayFrameComponent = styled(
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   columnGap: Root.gapM,
   padding: Root.gapXl,
-  fontFamily: poiretOne.style.fontFamily,
-  fontSize: '6rem',
+  
   textAlign: "center",
-  [theme.breakpoints.down("sm")]: {
-    gridTemplateColumns: "1fr",
-    fontSize: '6rem',
-    rowGap: Root.gapS
+  [theme.breakpoints.down("xs")]: {
+    columnGap: Root.gapS,
+    padding: Root.gapM,
   },
 }));
 

@@ -11,8 +11,10 @@ const NavButtonFrameComponent = styled(
   background: `linear-gradient(${Root.backgroundColor})`,
   color: Root.textConstrast,
   padding: Root.insidePadding,
+  marginBlock: "auto",
   "&:hover": { backgroundColor: Root.primaryColor },
-  width: "95px",
+  minWidth: "93px",
+  height: "55px",
 }));
 
 export default function NavButtonFrame({ children }: { children?: ReactNode }) {
