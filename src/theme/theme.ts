@@ -1,9 +1,15 @@
 import { createTheme } from "@mui/material";
 
-import { Satisfy } from "next/font/google";
+import { Satisfy, Monsieur_La_Doulaise } from "next/font/google";
 import { Root } from "./globals";
 
 const satisfy = Satisfy({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+const monsieur = Monsieur_La_Doulaise({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -23,8 +29,15 @@ export const theme = createTheme({
   typography: {
     h2: {
       fontFamily: satisfy.style.fontFamily,
-      fontSize: "1.5rem",
+      fontSize: "1.7rem",
       color: Root.textConstrast,
+    },
+    h1: {
+      fontFamily: monsieur.style.fontFamily,
+      fontSize: "9rem",
+      color: Root.textConstrast,
+      lineHeight: 0.9
+      
     },
   },
   breakpoints: {

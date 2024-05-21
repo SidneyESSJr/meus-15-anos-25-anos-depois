@@ -1,4 +1,5 @@
 "use client";
+
 import Countdown from "react-countdown";
 import DisplayFrame from "./display-frame";
 import DisplayCounterFrame from "./display-couter-frame";
@@ -18,7 +19,7 @@ export default function Display() {
             return <span>{days}</span>;
           }}
         ></Countdown>
-        <Typography variant="h4">Days</Typography>
+        <Typography variant="h4">Dias</Typography>
       </DisplayCounterFrame>
       <DisplayCounterFrame>
         <Countdown
@@ -29,7 +30,7 @@ export default function Display() {
             return <span>{hours}</span>;
           }}
         ></Countdown>
-        <Typography variant="h4">Hours</Typography>
+        <Typography variant="h4">Horas</Typography>
       </DisplayCounterFrame>
       <DisplayCounterFrame>
         <Countdown
@@ -40,7 +41,7 @@ export default function Display() {
             return <span>{minutes}</span>;
           }}
         ></Countdown>
-        <Typography variant="h4">Minutes</Typography>
+        <Typography variant="h4">Minutos</Typography>
       </DisplayCounterFrame>
       <DisplayCounterFrame>
         <Countdown
@@ -51,7 +52,7 @@ export default function Display() {
             return <span>{seconds}</span>;
           }}
         ></Countdown>
-        <Typography variant="h4">Seconds</Typography>
+        <Typography variant="h4">Segundos</Typography>
       </DisplayCounterFrame>
     </DisplayFrame>
   );

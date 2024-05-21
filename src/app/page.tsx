@@ -1,10 +1,10 @@
-import { Typography } from "@mui/material";
-import Header from "./components/header/header";
-import Display from "./components/home-display/display";
+import Banner from "./components/home/home-banner/banner";
+import Display from "./components/home/home-display/display";
 
 export default function Home() {
   return (
     <main>
+      <Banner />
       <Display />
     </main>
   );
