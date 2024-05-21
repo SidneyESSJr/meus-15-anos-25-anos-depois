@@ -8,7 +8,7 @@ const NavButtonFrameComponent = styled(
   Button,
   {}
 )(({}) => ({
-  background: Root.secondaryColor,
+  background: `linear-gradient(${Root.backgroundColor})`,
   color: Root.textConstrast,
   padding: Root.insidePadding,
   "&:hover": { backgroundColor: Root.primaryColor },

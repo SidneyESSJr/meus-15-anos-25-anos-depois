@@ -36,4 +36,18 @@ export const theme = createTheme({
       xl: 1920,
     },
   },
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          padding: Root.insidePadding,
+          background: `linear-gradient(${Root.backgroundColor})`,
+          borderRadius: Root.gapS,
+          border: "none",
+          display: "grid",
+          marginBottom: Root.gapM
+        },
+      },
+    },
+  },
 });

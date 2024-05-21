@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
+import Header from "./components/header/header";
 
 export const metadata: Metadata = {
   title: "Meus 15 anos 25 anos depois",
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <ThemeRegistry>
-        <body>{children}</body>
+        <body>
+          <Header />
+          {children}
+        </body>
       </ThemeRegistry>
     </html>
   );

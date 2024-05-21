@@ -8,14 +8,11 @@ const HeaderFrameComponent = styled(
   Container,
   {}
 )(({ theme }) => ({
-  padding: Root.insidePadding,
-  background: `linear-gradient(${Root.backgroundColor})`,
-  borderRadius: Root.gapS,
-  border: "none",
-  display: "grid",
   gridTemplateColumns: "1fr 1fr",
   [theme.breakpoints.down("sm")]: {
     gridTemplateColumns: "1fr",
+    rowGap: Root.gapM,
+    padding: Root.gapL
   },
 }));
 
