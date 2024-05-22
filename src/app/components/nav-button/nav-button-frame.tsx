@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 const NavButtonFrameComponent = styled(
   Button,
   {}
-)(({}) => ({
+)(({theme}) => ({
   background: `linear-gradient(${Root.backgroundColor})`,
   color: Root.textConstrast,
   padding: Root.insidePadding,
@@ -15,6 +15,9 @@ const NavButtonFrameComponent = styled(
   "&:hover": { backgroundColor: Root.primaryColor },
   minWidth: "93px",
   height: "55px",
+  [theme.breakpoints.down("sm")]: {
+    height: "35px",
+  },
 }));
 
 export default function NavButtonFrame({ children }: { children?: ReactNode }) {

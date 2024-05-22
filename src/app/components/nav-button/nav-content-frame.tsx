@@ -13,7 +13,8 @@ const NavContentFrameComponent = styled(
   columnGap: Root.gapM,
   justifyContent: "center",
   [theme.breakpoints.down("sm")]: {
-    columnGap: Root.gapS,
+    flexDirection: "column",
+    rowGap: Root.gapS,
     padding: Root.gapM,
   },
 }));

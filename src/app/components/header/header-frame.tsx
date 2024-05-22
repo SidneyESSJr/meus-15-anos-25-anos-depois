@@ -1,6 +1,5 @@
 "use client";
 
-import { Root } from "@/theme/globals";
 import { Container, styled } from "@mui/material";
 import { ReactNode } from "react";
 
