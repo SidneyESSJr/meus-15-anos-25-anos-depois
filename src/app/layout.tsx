@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Header from "./components/header/header";
-import Display from "./components/home/home-display/display";
 import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
 
@@ -20,7 +19,6 @@ export default function RootLayout({
         <body>
           <Header />
           {children}
-          
         </body>
       </ThemeRegistry>
     </html>

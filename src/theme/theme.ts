@@ -33,6 +33,8 @@ export let theme = createTheme({
     },
   },
   typography: {
+    fontFamily: poiretOne.style.fontFamily,
+    fontSize: 16,
     h1: {
       fontFamily: monsieur.style.fontFamily,
       fontSize: "9rem",
@@ -45,12 +47,14 @@ export let theme = createTheme({
       color: Root.textConstrast,
     },
     h3: {
-      fontFamily: poiretOne.style.fontFamily,
       fontSize: "4rem",
     },
     h4: {
-      fontFamily: poiretOne.style.fontFamily,
       fontSize: "2rem",
+    },
+    button: {
+      fontWeight: "bold",
+      letterSpacing: 1.4,
     },
   },
   breakpoints: {
@@ -75,11 +79,21 @@ export let theme = createTheme({
         },
       },
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding: Root.insidePadding,
+          ":last-child": {
+            paddingBottom: Root.insidePadding,
+          },
+        },
+      },
+    },
   },
 });
 
 theme = responsiveFontSizes(theme, {
   breakpoints: ["sm", "md"],
   factor: 2,
-  variants: ["h1", "h3", "h4", "button"],
+  variants: ["h1", "h3", "h4", "h5", "h6", "subtitle1", "button"],
 });
