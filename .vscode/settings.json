@@ -10,6 +10,8 @@
     "README.md": true,
     "tsconfig.json": true,
     ".next": true,
-    "next-env.d.ts": true
+    "next-env.d.ts": true,
+    ".env.local":true,
+    "firebase": true
   }
 }

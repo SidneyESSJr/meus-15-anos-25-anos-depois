@@ -1,4 +1,4 @@
-import getMusic, { Music } from "@/actions/getMusic";
+import getMusic, { Music } from "@/actions/get-music";
 import Banner from "./components/home/home-banner/banner";
 import Display from "./components/home/home-display/display";
 import MusicPlayer from "./components/music-player/music-player";

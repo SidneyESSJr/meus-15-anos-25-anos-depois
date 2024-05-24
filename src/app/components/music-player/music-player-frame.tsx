@@ -19,12 +19,13 @@ const CardContentFrameComponent = styled(
   {}
 )(({}) => ({
   display: "grid",
-  gridTemplateColumns: "2fr 3fr",
+  gridTemplateColumns: "2fr 4fr",
   width: "100%",
   color: Root.textConstrast,
   paddingBottom: 0,
   [theme.breakpoints.down("sm")]: {
-    gridTemplateColumns: "3fr 3fr",
+    gridTemplateColumns: "1fr",
+    margin: "auto"
   },
 }));
 
