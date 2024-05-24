@@ -1,5 +1,5 @@
 import { db } from "@/firebase/config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 
 export type Music = {
   nome: string;
@@ -17,7 +17,9 @@ export default async function getMusic<T>() {
   const fetchData: FetchData<T> = { data: [], erro: null, ok: true };
 
   try {
-    const querySnapshot = await getDocs(collection(db, "audios"));
+    const querySnapshot = await getDocs(
+      query(collection(db, "audios"), orderBy("sequence", "asc"))
+    );
     if (!querySnapshot)
       throw new Error("Não foi possivel acessar essa coleção");
 
