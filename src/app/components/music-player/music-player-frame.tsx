@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, CardContent, styled } from "@mui/material";
 import { Root } from "@/theme/globals";
 import { theme } from "@/theme/theme";
+import { Card, CardContent, styled } from "@mui/material";
 import { ReactNode } from "react";
 
 const MusicPlayerFrameComponent = styled(
@@ -25,7 +25,7 @@ const CardContentFrameComponent = styled(
   paddingBottom: 0,
   [theme.breakpoints.down("sm")]: {
     gridTemplateColumns: "1fr",
-    margin: "auto"
+    margin: "auto",
   },
 }));
 

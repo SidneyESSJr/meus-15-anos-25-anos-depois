@@ -2,8 +2,8 @@
 
 import { Root } from "@/theme/globals";
 import { Container, styled } from "@mui/material";
+import { Poiret_One } from "next/font/google";
 import { ReactNode } from "react";
-import { Poiret_One} from "next/font/google";
 
 const poiretOne = Poiret_One({
   weight: ["400"],
@@ -18,11 +18,11 @@ const DisplayFrameComponent = styled(
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   columnGap: Root.gapM,
   padding: Root.gapXl,
-  
+
   textAlign: "center",
-  [theme.breakpoints.down("xs")]: {
+  [theme.breakpoints.down("sm")]: {
     columnGap: Root.gapS,
-    padding: Root.gapM,
+    padding: Root.insidePadding,
   },
 }));
 

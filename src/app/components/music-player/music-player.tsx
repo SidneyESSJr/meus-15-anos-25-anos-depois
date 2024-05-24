@@ -2,6 +2,7 @@
 
 import { Music } from "@/actions/get-music";
 import { Root } from "@/theme/globals";
+import { theme } from "@/theme/theme";
 import PauseIcon from "@mui/icons-material/Pause";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
@@ -10,17 +11,14 @@ import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import { Box, Container, IconButton, Slider, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import MusicPlayerFrame from "./music-player-frame";
 import { formatDurationDisplay } from "../util/format-duration-display";
-import { theme } from "@/theme/theme";
+import MusicPlayerFrame from "./music-player-frame";
 
 export default function MusicPlayer({ data }: { data: Music[] }) {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [play, setPlay] = useState(true);
   const [index, setIndex] = useState(0);
   const [currentSound, setCurrentSound] = useState(data[index]);
   const [duration, setDuration] = useState(0);
-  const [isReady, setIsReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentProgress, setCurrentProgress] = useState(0);
   const [volume, setVolume] = useState(0.5);
@@ -89,7 +87,7 @@ export default function MusicPlayer({ data }: { data: Music[] }) {
     setCurrentSound(data[index]);
     audioRef.current.src = currentSound.url;
     audioRef.current.play();
-  }, [currentSound.url, index]);
+  }, [currentSound, data, index]);
 
   return (
     <Container component="section">
@@ -100,7 +98,6 @@ export default function MusicPlayer({ data }: { data: Music[] }) {
         onDurationChange={(e) => setDuration(e.currentTarget.duration)}
         onCanPlay={(e) => {
           e.currentTarget.volume = volume;
-          setIsReady(true);
         }}
         onPlaying={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}

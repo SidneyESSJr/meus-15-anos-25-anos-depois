@@ -1,21 +1,25 @@
+import getMosaicImage, { MosaicI } from "@/actions/get-mosaic-image";
 import getMusic, { Music } from "@/actions/get-music";
-import Banner from "./components/home/home-banner/banner";
 import Display from "./components/home/home-display/display";
+import Mosaic from "./components/home/home-mosaic/mosaic";
 import MusicPlayer from "./components/music-player/music-player";
 
 export default async function Home() {
-  const { fetchData } = await getMusic<Music>();
-
-  console.log(fetchData.erro)
+  const { fetchData: music } = await getMusic<Music>();
+  const { fetchData: image } = await getMosaicImage<MosaicI>();
 
   return (
     <main>
-      {!fetchData.erro ? (
-        <MusicPlayer data={fetchData.data} />
+      {!music.erro ? (
+        <MusicPlayer data={music.data} />
       ) : (
         "Não foi possivel iniciar o player"
       )}
-      <Banner />
+      {!image.erro ? (
+        <Mosaic data={image.data} />
+      ) : (
+        "Não foi possivel carregar as imagens"
+      )}
       <Display />
     </main>
   );

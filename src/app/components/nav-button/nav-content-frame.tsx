@@ -15,7 +15,7 @@ const NavContentFrameComponent = styled(
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
     rowGap: Root.gapS,
-    padding: Root.gapM,
+    padding: Root.insidePadding,
   },
 }));
 
