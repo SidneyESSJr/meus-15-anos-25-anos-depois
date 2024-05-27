@@ -23,6 +23,7 @@ const CardContentFrameComponent = styled(
   width: "100%",
   color: Root.textConstrast,
   paddingBottom: 0,
+  paddingInline: "30px",
   [theme.breakpoints.down("sm")]: {
     gridTemplateColumns: "1fr",
     margin: "auto",

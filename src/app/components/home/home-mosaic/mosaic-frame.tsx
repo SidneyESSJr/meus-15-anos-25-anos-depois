@@ -12,8 +12,6 @@ const MosaicFrameComponent = styled(
   borderRadius: Root.gapS,
   border: "none",
   display: "grid",
-  gridArea: "1/1",
-  padding: Root.gapXl,
   gap: Root.gapS,
   "&>*": {
     height: "100%",

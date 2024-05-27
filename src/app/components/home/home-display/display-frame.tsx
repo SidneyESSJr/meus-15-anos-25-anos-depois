@@ -17,7 +17,6 @@ const DisplayFrameComponent = styled(
 )(({ theme }) => ({
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
   columnGap: Root.gapM,
-  padding: Root.gapXl,
 
   textAlign: "center",
   [theme.breakpoints.down("sm")]: {
