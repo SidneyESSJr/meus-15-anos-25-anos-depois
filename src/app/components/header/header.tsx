@@ -17,22 +17,22 @@ export default function Header() {
 
       <NavContentFrame>
         <NavButtonFrame>
-          <Link href={""}>
+          <Link href={"/"}>
             <Typography variant="button">Home</Typography>
           </Link>
         </NavButtonFrame>
         <NavButtonFrame>
-          <Link href={""}>
+          <Link href={"/sobre"}>
             <Typography variant="button">Sobre min</Typography>
           </Link>
         </NavButtonFrame>
         <NavButtonFrame>
-          <Link href={""}>
+          <Link href={"/presenca"}>
             <Typography variant="button">Presença</Typography>
           </Link>
         </NavButtonFrame>
         <NavButtonFrame>
-          <Link href={""}>
+          <Link href={"/festa"}>
             <Typography variant="button">Festa</Typography>
           </Link>
         </NavButtonFrame>
