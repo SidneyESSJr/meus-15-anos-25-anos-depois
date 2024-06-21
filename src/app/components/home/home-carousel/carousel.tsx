@@ -22,7 +22,7 @@ const theme = useTheme()
   }, []);
 
   const settings: SwiperProps = {
-    slidesPerView: isSmallScreen ? 1.3 : 2.5,
+    slidesPerView: isSmallScreen ? 1.3 : 2.6,
     pagination: {
       clickable: true,
     },
