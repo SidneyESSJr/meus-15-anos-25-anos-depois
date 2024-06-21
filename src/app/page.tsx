@@ -3,9 +3,9 @@ import getMusic from "@/actions/get-music";
 import { ErrorBoundary } from "react-error-boundary";
 import Mosaic from "./components/home/home-carousel/carousel";
 import Display from "./components/home/home-display/display";
+import MapLocation from "./components/location/map-location";
 import MusicPlayer from "./components/music-player/music-player";
 import Error from "./error";
-import MapLocation from "./components/location/map-location";
 
 export default async function Home() {
   const music = await getMusic();
