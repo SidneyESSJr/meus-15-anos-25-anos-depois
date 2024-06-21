@@ -6,6 +6,7 @@ import { SwiperProps, SwiperSlide } from "swiper/react";
 import Slider from "../../common/slider/Slider";
 import CarouselFrame from "./carousel-frame";
 import Loading from "./loading";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 export default function CarouselFrameComponent({
   data,
@@ -13,13 +14,15 @@ export default function CarouselFrameComponent({
   data: CorouselI[];
 }) {
   const [isLoaded, setIsLoaded] = useState(false);
+const theme = useTheme()
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
   const settings: SwiperProps = {
-    slidesPerView: 2.6,
+    slidesPerView: isSmallScreen ? 1.3 : 2.5,
     pagination: {
       clickable: true,
     },
@@ -27,7 +30,7 @@ export default function CarouselFrameComponent({
     autoplay: {
       delay: 3000,
     },
-    effect: "coverflow"
+    effect: "coverflow",
   };
 
   return (

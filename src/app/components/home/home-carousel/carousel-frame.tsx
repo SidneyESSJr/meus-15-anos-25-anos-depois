@@ -11,7 +11,6 @@ const CarouselFrameComponent = styled(
   borderRadius: Root.gapS,
   display: "block",
   border: "none",
-  height: "486px",
   ["img"]: {
     width: "100%",
     height: "442px",
@@ -19,6 +18,9 @@ const CarouselFrameComponent = styled(
   },
   [".swiper-pagination-bullet"]: {
     background: "#fff",
+  },
+  [".swiper-wrapper"]: {
+    width: "320px",
   },
   [".swiper-3d"]: {
     width: "100%",
