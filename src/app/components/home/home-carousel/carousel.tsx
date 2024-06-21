@@ -1,19 +1,34 @@
 "use client";
-
-import { MosaicI } from "@/actions/get-mosaic-image";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import { CorouselI } from "@/actions/get-corousel-image";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { SwiperProps, SwiperSlide } from "swiper/react";
+import Slider from "../../common/slider/Slider";
 import CarouselFrame from "./carousel-frame";
 import Loading from "./loading";
 
-export default function CarouselFrameComponent({ data }: { data: MosaicI[] }) {
+export default function CarouselFrameComponent({
+  data,
+}: {
+  data: CorouselI[];
+}) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  const settings: SwiperProps = {
+    slidesPerView: 2.6,
+    pagination: {
+      clickable: true,
+    },
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    effect: "coverflow"
+  };
 
   return (
     <>
@@ -21,19 +36,18 @@ export default function CarouselFrameComponent({ data }: { data: MosaicI[] }) {
         <Loading />
       ) : (
         <CarouselFrame>
-          <Splide options={{ rewind: true, perPage: 2 }}>
+          <Slider settings={settings}>
             {data.map((img, key) => (
-              <SplideSlide key={key}>
+              <SwiperSlide key={key}>
                 <Image
-                  alt=""
+                  alt={`Imagem ${key}`}
                   src={img.url}
-                  width={1500}
                   height={1500}
-                  priority
+                  width={1500}
                 />
-              </SplideSlide>
+              </SwiperSlide>
             ))}
-          </Splide>
+          </Slider>
         </CarouselFrame>
       )}
     </>

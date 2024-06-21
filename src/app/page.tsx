@@ -1,4 +1,4 @@
-import getMosaicImage from "@/actions/get-mosaic-image";
+import getMosaicImage from "@/actions/get-corousel-image";
 import getMusic from "@/actions/get-music";
 import { ErrorBoundary } from "react-error-boundary";
 import Display from "./components/home/home-display/display";

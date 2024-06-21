@@ -19,9 +19,6 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@splidejs/react-splide/*": [
-        "./node_modules/@splidejs/react-splide/dist/*"
-      ]
     }
   },
   "include": [

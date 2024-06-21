@@ -1,12 +1,12 @@
 import { db } from "@/firebase/config";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 
-export type MosaicI = {
+export type CorouselI = {
   url: string;
 };
 
 export default async function getMosaicImage<T>() {
-  const data: MosaicI[] = [];
+  const data: CorouselI[] = [];
 
   const querySnapshot = await getDocs(
     query(collection(db, "mosaicImage"), orderBy("sequence", "asc"))
@@ -16,7 +16,7 @@ export default async function getMosaicImage<T>() {
 
   querySnapshot.forEach((doc) => {
     if (doc) {
-      data.push(doc.data() as MosaicI);
+      data.push(doc.data() as CorouselI);
     } else {
       throw new Error("Não há documentos nessa coleção");
     }

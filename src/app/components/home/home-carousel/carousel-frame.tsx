@@ -13,20 +13,15 @@ const CarouselFrameComponent = styled(
   border: "none",
   height: "486px",
   ["img"]: {
-    width: "350px",
-    height: "470px",
+    width: "100%",
+    height: "442px",
     borderRadius: Root.gapS,
   },
-  [".splide__list"]: {
-    display: "flex",
-    columnGap: Root.gapS,
-    margin: "auto",
+  [".swiper-pagination-bullet"]: {
+    background: "#fff",
   },
-  [".splide__slide"]: {
-    width: "350px !important",
-  },
-  [".splide__pagination"]: {
-    display: "none",
+  [".swiper-3d"]: {
+    width: "100%",
   },
   [theme.breakpoints.down("sm")]: {
     fontSize: "3rem",
